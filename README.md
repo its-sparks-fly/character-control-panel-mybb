@@ -1,2 +1,8 @@
-# character-control-panel-mybb
-[GER] Trennen von RPG-Charakter-Einstellungen vom UserCP für MyBB
+# Character Control Panel
+Dieses Plugin erweitert das AdminCP um eine neue Funktion, durch die RPG-Charakter-Einstellungen von User-Einstellungen getrennt werden können. So ermöglicht es das Character Control Panel beispielsweise, Profilfelder, die mit Charakter-Einstellungen zusammenhängen (z.B. Avatarperson, Kurzbeschreibung) vom UserCP zu trennen, um Spieler:innen größeren Überblick über ausfüllbare Felder zu ermöglichen. Das Character Control Panel wird als https://euerforum.de/character.php aufgerufen.
+# Funktionen
+Das "CharaCP" bietet diverse Funktionen, durch die es sich ganz individuell gestalten lässt. 
+## Unterseiten mit Profilfeldern
+Im Admin Control Panel können Unterseiten für das Character Control Panel erstellt werden, auf denen einzelne Profilfelder ausgegeben werden können. <u>Beispiel:</u> Alle Profilfelder, die sich auf das Äußere des Charakters beziehen, können einer Unterseite "Aussehen bearbeiten" zugeordnet werden. <b>Das CharaCP übernimmt alle Einstellungen der Profilfelder</b>, die im AdminCP angegeben wurden, was individuelle Konfigurierbarkeit pro Nutzer:innengruppe ermöglicht. Zudem können jeder Seite Nutzer:innengruppen zugeordnet werden, sodass je Gruppe verschiedene CharaCP-Unterseiten angezeigt werden können. 
+## Navigation
+Grundsätzlich baut sich die Navigation des Character Control Panels sich automatisch aus allen angehängten Seiten (Profilfelder, Plugins, eigene Funktionen) und orientiert sich dabei auch an den eingestellten Gruppenberechtigungen. Wer zusätzlich z.B. Listen in der Navigation aufführen möchte, oder Probleme damit hat, alle angehängten Plugins in der Navigation darzustellen, kann im Admin Control Panel die self-building Navigation händisch erweitern. 
