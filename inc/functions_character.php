@@ -48,6 +48,7 @@ function character_menu_pages()
 	        eval("\$characternavbit .= \"".$templates->get("character_nav_pages")."\";");
             } else { $characternavbit .= ""; }
     }
+    $plugins->run_hooks("character_menu_pages");
     character_build_custom_nav($cat);
 }
 
@@ -58,6 +59,7 @@ function character_menu_plugins()
     $cat = 2;
     $title = $lang->character_nav_title_plugins;
     eval("\$characternavbit .= \"".$templates->get("character_nav_title")."\";");
+    $plugins->run_hooks("character_menu_plugins");
     character_build_custom_nav($cat);
 }
 
@@ -75,6 +77,7 @@ function character_menu_code()
 	        eval("\$characternavbit .= \"".$templates->get("character_nav_pages")."\";");
             } else { $characternavbit .= ""; }
     }
+    $plugins->run_hooks("character_menu_code");
     character_build_custom_nav($cat);
 }
 
