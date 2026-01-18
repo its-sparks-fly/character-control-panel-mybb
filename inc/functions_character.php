@@ -35,7 +35,7 @@ function character_menu()
  */
 function character_menu_pages()
 {
-    global $db, $mybb, $lang, $templates, $characternavbit;
+    global $db, $mybb, $plugins, $lang, $templates, $characternavbit;
 
     $cat = 1;
     $characternavbit = "";
@@ -54,7 +54,7 @@ function character_menu_pages()
 
 function character_menu_plugins()
 {
-    global $db, $mybb, $lang, $templates, $characternavbit;
+    global $db, $mybb, $plugins, $lang, $templates, $characternavbit;
 
     $cat = 2;
     $title = $lang->character_nav_title_plugins;
@@ -65,7 +65,7 @@ function character_menu_plugins()
 
 function character_menu_code()
 {
-    global $db, $mybb, $lang, $templates, $characternavbit;
+    global $db, $mybb, $plugins, $lang, $templates, $characternavbit;
 
     $cat = 3;
     $title = $lang->character_nav_title_code;
