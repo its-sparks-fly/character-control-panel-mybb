@@ -225,6 +225,9 @@ while($page = $db->fetch_array($query)) {
 	 
 		 $user = [];
 		 $fields = $mybb->get_input('profile_fields', MyBB::INPUT_ARRAY);
+		foreach ($fields as $key => $value) {
+		    $fields[$key] = $db->escape_string($value);
+		}
 		 $db->update_query("userfields", $fields, "ufid = '{$mybb->user['uid']}'");
 		 redirect("character.php?action={$page['action']}", $lang->redirect_profileupdated);
 	 }
