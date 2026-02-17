@@ -1227,11 +1227,17 @@ function character_admin_config_profile_fields_commit()
     }
 
     $check = $db->fetch_field($db->simple_select('character_pages_fields', 'fid', "fid='{$fid}'"), 'fid');
-    if ($check) {
-        $db->update_query("character_pages_fields", ["cpid" => (int)$character_page], "fid='{$fid}'");
-    } else {
-        $db->insert_query("character_pages_fields", ["fid" => $fid, "cpid" => (int)$character_page]);
-    }
+	if($character_page != 0) {
+		if ($check) {
+			$db->update_query("character_pages_fields", ["cpid" => (int)$character_page], "fid='{$fid}'");
+		} else {
+			$db->insert_query("character_pages_fields", ["fid" => $fid, "cpid" => (int)$character_page]);
+		}
+	} else {
+		if($check) {
+			$db->delete_query("character_pages_fields", "fid='{$fid}'");
+		}
+	}
 }
 
 $plugins->add_hook("usercp_profile_start", "character_usercp_profile_start", 0);
